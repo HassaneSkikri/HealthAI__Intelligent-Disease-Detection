@@ -89,7 +89,7 @@ The primary goals of this project are to:
 We will use publicly available datasets for our project:
 - [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data)
 - [Alzheimer’s Dataset](https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images/data)
-- [Covid-19 Chest X-ray Dataset](https://github.com/ieee8023/covid-chestxray-dataset)
+- [Covid-19 Chest X-ray Dataset](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset)
 - [Pneumonia Chest X-ray Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 - [Breast Cancer Dataset](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
 - [Diabetes Data Set](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)
