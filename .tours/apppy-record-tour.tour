@@ -1,0 +1,23 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "app.py record tour",
+  "steps": [
+    {
+      "file": "app.py",
+      "description": "- flask is used for creating the web application\r\n- request for getting the data from the user\r\n- jsonify is used for converting the data into json format \r\n- url_for is used for getting the url of the page that means the location of the page.\r\n- render template for rendering the html page.\r\n\r\n- pickle is used for saving the model\r\n- numpy is used for numerical operations\r\n- os is used for interacting with the operating system\r\n- cv2 is used for image processing\r\n- sklearn is used for machine learning models.",
+      "line": 1,
+      "title": "import libraries",
+      "selection": {
+        "start": {
+          "line": 19,
+          "character": 1
+        },
+        "end": {
+          "line": 20,
+          "character": 86
+        }
+      }
+    }
+  ],
+  "ref": "main"
+}

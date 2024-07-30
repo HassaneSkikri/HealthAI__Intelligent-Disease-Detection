@@ -1,0 +1,11 @@
+#______________________________________________________importing the libraries______________________________________________________
+
+
+from flask import Flask, request, jsonify, url_for, render_template
+import pickle 
+import numpy as np
+import os 
+import cv2
+import sklearn
+
+#______________________________________________________creating the flask app______________________________________________________
