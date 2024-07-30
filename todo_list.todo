@@ -3,4 +3,13 @@ Shortcuts like alt+s to start, alt+d to mark as done, and alt+c to cancel the ta
 let's started
 
 Todo:
+    ✔ Step 1: Organize the Project Structure @started(24-07-30 12:40) @done(24-07-30 13:06) @lasted(26m9s)
+    ✔ Step 2: Install Dependencies @started(24-07-30 12:40) @done(24-07-30 13:06) @lasted(26m21s)
+    ✔ Step 3: Create Flask Application with basic setup @started(24-07-30 12:40) @done(24-07-30 13:06) @lasted(26m24s)
+    ✔ Step 4: Create HTML Templates for the homepage with cards for each disease. @started(24-07-30 13:06) @done(24-07-30 16:58) @lasted(3h52m22s)
+    ☐ Step 5: Style the Application @started(24-07-30 16:58)
+    ☐ Step 6: Create Disease Pages
+    ☐ step 7: style the disease pages
+    ☐ Step 8: Add JavaScript for Interactivity
+    ☐ Step 9: Implement Prediction Logic in Flask
     
