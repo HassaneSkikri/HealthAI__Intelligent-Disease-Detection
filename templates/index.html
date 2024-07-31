@@ -4,15 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HealthAI Intelligent Disease Detection</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+        <link rel="stylesheet" href="../static/css/styles.css">
     </head>
     <body>
-        <div class="container">
-            <h1>HealthAi intelligent disease Detection</h1>
-            <div class="cards">
+        <header>
+                <nav>
+                    <ul>
+                        <li><a href="#">Main</a></li>
+                        <li><a href="#">BreastCan</a></li>
+                        <li><a href="#">Diabetes</a></li>
+                        <li><a href="#">Alzheimer</a></li>
+                        <li><a href="#">brain tumor</a></li>
+                        <li><a href="#">Covid 19</a></li>
+                        <li><a href="#">Pneumonia</a></li>
+                    </ul>
+                </nav>
+        <main>
+            <section class="hero">
+                <h1>HealthAi intelligent disease Detection</h1>
+                <p>Get predictions for various diseases using AI models.</p>
+            </section>
+            <section class="cards">
 
                 <!-- TODO: Card1:  -->
                 <div class="card">
+                    <!-- <img src="{{ url_for('static', filename='images/breastcan.jpg') }}" alt="Breast Cancer"> -->
+                     <img src="../static/images/breastcan.jpg" alt="Breast cancer">
                     <h2>Breast Cancer</h2>
                     <p>Breast cancer is the most common cancer amongst women in the world. It accounts
                         for 25% of all cancer cases, and affected over 2.1 Million people in 2015 alone.
@@ -24,6 +42,7 @@
 
                 <!-- TODO: Card2:  -->
                 <div class="card">
+                    <img src="../static/images/diabetes.jpg" alt="diabetes">
                     <h2>Diabetes</h2>
                     <p>Diabetes is a chronic disease that occurs when the body cannot properly use and store 
                         glucose and sugar. It is a metabolic disorder that affects the body's ability to process 
@@ -36,18 +55,18 @@
 
                 <!-- TODO: Card3:  -->
                 <div class="card">
+                    <img src="../static/images/alzheimer.jpg" alt="alzheimer">
                     <h2>Alzheimer's Disease</h2>
                     <p>Alzheimer's disease is a progressive neurological disorder that leads to memory loss, 
                         cognitive decline, and changes in behavior. It is the most common cause of dementia, 
-                        affecting a person's ability to think, remember, and carry out daily activities. Symptoms
-                        typically start with mild memory issues and can worsen over time, eventually affecting language,
-                        reasoning, and the ability to perform tasks. 
+                        affecting a person's ability to think, remember, and carry out daily activities. 
                     </p>
                     <a href="{{ url_for('disease_page', disease='alzheimer') }}">Predict</a>
                 </div>
 
                 <!-- TODO: Card4:  -->
                 <div class="card">
+                    <img src="../static/images/brain_tumor.jpg" alt="brain_tumor">
                     <h2>Brain Tumor</h2>
                     <p>A brain tumor is a mass of abnormal cells that grows in the brain. It can be either cancerous or
                         noncancerous. The tumor may cause an increase in pressure inside the skull, resulting in potential
@@ -57,26 +76,30 @@
 
                 <!-- TODO: Card5:  -->
                 <div class="card">
+                    <img src="../static/images/covid19.jpg" alt="COVID-19">
                     <h2>Covid 19</h2>
-                    <p>COVID-19, also known as the coronavirus disease 2019, is caused by the severe acute respiratory
+                    <p> Covid 19 is caused by the severe acute respiratory
                         syndrome coronavirus 2 (SARS-CoV-2). It was first identified in December 2019 in Wuhan, China,
                         and has since led to a global pandemic. The disease is primarily spread through respiratory
                         droplets, and symptoms can range from mild (or no symptoms) to severe respiratory illness.
-                        Common symptoms include fever, cough, and difficulty breathing.</p>
+                        </p>
                     <a href="{{ url_for('disease_page', disease='covid19') }}">Predict</a>
                 </div>
 
                 <!-- TODO: Card6:  -->
                 <div class="card">
+                    <img src="../static/images/pneumia.jpg" alt="pneuma">
                     <h2>Pneumonia</h2>
                     <p>Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known
                         as alveoli.Symptoms typically include some combination of productive or dry cough, chest pain, fever
-                        and difficulty breathing. The severity of the condition is variable. Pneumonia is usually caused by
-                        infection with viruses or bacteria and less commonly by other microorganisms, certain medications or
-                        conditions such as autoimmune diseases.</p>
+                        and difficulty breathing. The severity of the condition is variable.</p>
                     <a href="{{ url_for('disease_page', disease='pneumonia') }}">Predict</a>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Health AI Platform. All rights reserved.</p>
+        </footer>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </body>
 </html>

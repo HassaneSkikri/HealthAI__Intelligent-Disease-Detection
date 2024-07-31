@@ -1,0 +1,142 @@
+/*TODO: the global styles for the website*/
+:root{
+    --primary-color: #18181b;
+    --secondary-color: rgb(39, 39, 42);
+    --title-color: rgb(244, 244, 245);
+    --subtitle-color: rgb(161, 161, 170);
+    --hover-color: #333333;
+    --border: rgba(63, 63, 70, 0.4);
+    --blue: rgb(93,188,252);
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--subtitle-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* TODO: the header part */
+header{    
+    font-weight: bold;
+    color: var(--title-color);
+    padding: 1em 0; /*1em = 16px*/
+    margin:0;
+}
+
+header nav{
+    justify-content: center;
+    display: flex;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex; /*to make it horizontal*/
+    justify-content: center;
+    margin: 0;
+    padding: 1em;
+    background: var(--secondary-color);
+    border-radius: 50px;
+}
+
+header nav ul li{
+    margin: 0 1em
+}
+
+header nav ul li a{
+    text-decoration:none;
+    color: var(--title-color);
+    font-size: 1.2em; /*1.2em = 19.2px*/
+    padding: 0.5em 0.5em;
+    transition: background 0.3s; /*for smooth transition*/
+}
+
+header nav ul li a:hover{
+    background:var(--hover-color);
+    color: var(--blue);
+    border-radius: 10px;
+}
+
+/*TODO:hero section */
+
+.hero{
+    text-align:center;
+    padding: 2em 0;
+}
+
+.hero h1{
+    color: var(--title-color);
+    font-size:3em;
+    margin: 0.5em 0;
+}
+
+.hero p{
+    font-size: 1.2em;
+}
+/* TODO: Cards section */
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.card{
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 1em;
+    width: 400px;
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.card h2{
+    color: var(--title-color);
+    margin: 0.5em 0;
+    font-size: 1.5em;
+}
+
+.card p{
+    font-size: 1.1em;
+}
+
+.card a{
+    text-decoration: none;
+    display: inline-block;
+    background:  #18181b;
+    margin-top: 1em;
+    padding: 0.5em 1.5em;
+    color: var(--title-color);
+    border: var(--primary-color) solid 1px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    border-color: var(--blue);
+    box-shadow: 0 2px 2px var(--blue);
+}
+
+footer{
+    background: var(--secondary-color);
+    color: var(--title-color);
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}
+
