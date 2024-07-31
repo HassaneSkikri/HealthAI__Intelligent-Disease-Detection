@@ -9,8 +9,8 @@ Todo:
     ✔ Step 4: Create HTML Templates for the homepage with cards for each disease. @started(24-07-30 13:06) @done(24-07-30 16:58) @lasted(3h52m22s)
     ✔ Step 5: Style the Application @started(24-07-30 16:58) @done(24-07-31 03:15) @lasted(10h17m48s)
     ✔ spet 6: add some animation to the index.html @done(24-07-31 12:35)
-    ☐ Step 7: Create Disease Pages
-    ☐ step 8: style the disease pages
-    ☐ Step 9: Add JavaScript for Interactivity
-    ☐ Step 10: Implement Prediction Logic in Flask
+    ✔ Step 7: Create Disease Pages @started(24-07-31 12:37) @done(24-07-31 19:20) @lasted(6h43m54s)
+    ✔ step 8: style the disease pages @done(24-07-31 19:21)
+    ✔ Step 9: Add JavaScript for Interactivity @done(24-07-31 19:21)
+    ☐ Step 10: Implement Prediction Logic in Flask @started(24-07-31 19:21)
     
