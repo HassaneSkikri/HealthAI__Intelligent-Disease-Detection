@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes disease detection</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prediction.css')}}">
+
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="{{ url_for('disease_page', disease='')}}">Main</a></li>
+                <li><a href="{{ url_for('index')}}">Main</a></li>
                 <li><a href="{{ url_for('disease_page', disease='BreastCan')}}">BreastCan</a></li>
                 <li><a href="{{ url_for('disease_page', disease='diabetes')}}">Diabetes</a></li>
                 <li><a href="{{ url_for('disease_page', disease='alzheimer')}}">Alzheimer</a></li>
@@ -25,7 +27,7 @@
             <section class="hero">
                 <h1>Diabetes disease Prediction</h1>
             </section>
-            <form action="" method="post" enctype="multipart/form-data" id="normal_prediction">
+            <form action="{{ url_for('disease_page', disease='diabetes') }}" method="post" enctype="multipart/form-data" id="normal_prediction">
                 <img src="{{ url_for('static', filename='images/diabetes.jpg') }}" alt="diabetes">
                 <div class="grid-container">
                     <div class="grid-item">
@@ -63,7 +65,31 @@
                 </div>
                 <button type="submit">Predict</button>
             </form>
+            {% if prediction_result %}
+            <div class="prediction">
+                <div class="input_data">
+                    <h3>Input Data:</h3>
+                    <ul class="inputs">
+                        <li>Pregnancies: {{ prediction_result.input_data.Pregnancies }}</li>
+                        <li>Glucose: {{ prediction_result.input_data.Glucose }}</li>
+                        <li>Blood Pressure: {{ prediction_result.input_data.BloodPressure }}</li>
+                        <li>Skin Thickness: {{ prediction_result.input_data.SkinThickness }}</li>
+                        <li>Insulin: {{ prediction_result.input_data.Insulin }}</li>
+                        <li>BMI: {{ prediction_result.input_data.BMI }}</li>
+                        <li>Diabetes Pedigree Function: {{ prediction_result.input_data.DiabetesPedigreeFunction }}</li>
+                        <li>Age: {{ prediction_result.input_data.Age }}</li>
+                    </ul>
+                </div>
+                <h2>Prediction Result: </h2>
+                <div id="prediction-result">
+                    <p>Prediction: {{ prediction_result.prediction }}</p>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </main>
+    <footer>
+        <p>© 2024 Diabetes Disease Detection</p>
+    </footer>
 </body>
 </html>
