@@ -4,6 +4,17 @@
   "steps": [
     {
       "file": "app.py",
+      "description": "If the request method is POST (i.e., the form has been submitted), the function handle_image_disease is called, passing the request and disease parameters. This function processes the image and returns the prediction result.\r\nRegardless of whether the form is submitted or not, the corresponding HTML template (e.g., alzheimer.html, brain_tumor.html) is rendered with the prediction_result passed to the template context.",
+      "line": 46
+    },
+    {
+      "file": "app.py",
+      "description": "first we need to checks if the 'image' key exists in the request.files dictionary. If not, it returns an error indicating that no file part was found in the request.\r\n\r\nthen we need to Check if the file was Selected: If the file.filename is an empty string, it means no file was selected. The function returns an error indicating that no file was selected.\r\n\r\nafer this we need to check if the file is allowed and then ensure that is secure The secure_filename function is used to generate a secure version of the file's name, ensuring it is safe to use\r\n\r\nThe np.expand_dims function adds an extra dimension to the array, making it a batch of one image. This is required for the model's input.\r\n\r\nThe np.argmax function determines the index of the highest value in the prediction array (indicating the predicted class). The result is extracted as an integer.",
+      "line": 58,
+      "title": "handle image disease "
+    },
+    {
+      "file": "app.py",
       "description": "- flask is used for creating the web application\r\n- request for getting the data from the user\r\n- redirect for redirecting to the home page of the website\r\n- url_for is used for getting the url of the page that means the location of the page.\r\n- render template for rendering the html page.\r\n\r\n- pickle is used for saving the model\r\n- numpy is used for numerical operations\r\n- os is used for interacting with the operating system\r\n- cv2 is used for image processing\r\n- secure_filename() function to secure a filename before storing it directly on the filesystem",
       "line": 1,
       "title": "import libraries",
@@ -17,12 +28,6 @@
           "character": 86
         }
       }
-    },
-    {
-      "file": "app.py",
-      "description": "here we just define dynamic route for disease pages\r\nThe disease_page function checks if the disease variable matches any of the specified diseases.\r\nIf it matches, it renders the corresponding HTML template (e.g., alzheimer.html).\r\nIf it doesn't match, it redirects to the homepage.\r\n",
-      "line": 26,
-      "title": "disease_page function"
     }
   ],
   "ref": "main"
