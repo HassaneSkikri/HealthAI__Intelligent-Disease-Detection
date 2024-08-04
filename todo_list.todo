@@ -15,4 +15,5 @@ Todo:
     ✔ step 10: style the disease pages @done(24-07-31 19:21)
     ✔ Step 11: Add JavaScript for Interactivity @done(24-07-31 19:21)
     ✔ Step 12: Implement Prediction Logic in Flask @started(24-07-31 19:21) @done(24-08-02 23:04) @lasted(2d3h43m49s)
-    
+    ✔ step 13: add the prediction logic to the frontend @started(24-08-03 19:11) @done(24-08-03 19:11) @lasted(6s)
+    ☐ step 14: deploy the app to Azure @started(24-08-03 19:11)
