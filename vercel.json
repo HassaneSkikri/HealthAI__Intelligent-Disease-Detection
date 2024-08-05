@@ -10,6 +10,17 @@
         "use": "@vercel/python"
       }
     ],
+    "ignore":[
+        ".tours/*",
+        "Research_envirenment/*",
+        "validation/*",
+        "delete.py",
+        "extensions.md",
+        "LICENSE",
+        "project_structer.drawio",
+        "README.md",
+        "todo_list.todo"
+    ],
     "routes": [
       {
         "src": "/(.*)",
