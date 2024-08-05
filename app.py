@@ -1,6 +1,6 @@
 # TODO:______________________________________________________importing the libraries______________________________________________________
 
-from flask import Flask, request, redirect, url_for, render_template, jsonify
+from flask import Flask, request, redirect, url_for, render_template
 import numpy as np
 import pandas as pd 
 import os 
