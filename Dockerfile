@@ -16,7 +16,7 @@ COPY . .
 EXPOSE 5000
 
 # Define environment variable
-ENV NAME World
+ENV NAME healthai
 
 # Run app.py when the container launches
 CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]

@@ -11,5 +11,6 @@ LICENSE
 project_structer.drawio
 README.md
 todo_list.todo
+calculate_size.py
 .vscode/
-.venv/
+.health_venv/

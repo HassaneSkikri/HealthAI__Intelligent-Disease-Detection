@@ -1,13 +1,12 @@
 # TODO:______________________________________________________importing the libraries______________________________________________________
 
 from flask import Flask, request, redirect, url_for, render_template
-import numpy as np
-import pandas as pd 
+from numpy import array,nan
+from pandas import DataFrame
 import os 
-import tensorflow as tf
-import joblib
-import pickle 
+import joblib, pickle
 from werkzeug.utils import secure_filename 
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
 from sklearn.base import BaseEstimator, TransformerMixin
 
@@ -68,12 +67,12 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 #load models
 models = {
-    'alzheimer': tf.keras.models.load_model('Models/alzheimer_model.keras'),
-    'brain_tumor': tf.keras.models.load_model('Models/Brain_tumor_model.keras'),
+    'alzheimer': load_model('Models/alzheimer_model.keras'),
+    'brain_tumor': load_model('Models/Brain_tumor_model.keras'),
     'breast_cancer': pickle.load(open('Models/breast_cancer_model.pkl', 'rb')),
-    'covid19': tf.keras.models.load_model('Models/covid_model.h5',compile=False),
+    'covid19': load_model('Models/covid_model.h5',compile=False),
     'diabetes': joblib.load('Models/diabetes_model.pkl'),
-    'pneumonia': tf.keras.models.load_model('Models/pneumia_model.keras')
+    'pneumonia': load_model('Models/pneumia_model.keras')
 }
 
 model = models['covid19']
@@ -212,7 +211,7 @@ def handle_breast_cancer(request):
         request.form.get('fractal_dimension_worst')
     ]
     
-    features = np.array([float(feature) if feature else np.nan for feature in features]).reshape(1, -1)
+    features = array([float(feature) if feature else nan for feature in features]).reshape(1, -1)
     feature_names = [
         'radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean', 'smoothness_mean', 
         'compactness_mean', 'concavity_mean', 'concave_points_mean', 'symmetry_mean', 
@@ -221,7 +220,7 @@ def handle_breast_cancer(request):
         'area_worst', 'smoothness_worst', 'compactness_worst', 'concavity_worst', 
         'concave_points_worst', 'symmetry_worst', 'fractal_dimension_worst'
     ]
-    input_data = pd.DataFrame(features, columns=feature_names)
+    input_data = DataFrame(features, columns=feature_names)
 
     model = models['breast_cancer']
     prediction = model.predict(input_data)
@@ -244,9 +243,9 @@ def handle_diabetes(request):
         request.form.get('diabetesPedigreeFunction'),
         request.form.get('age')
     ]
-    features = np.array([float(feature) if feature else np.nan for feature in features]).reshape(1, -1)
+    features = array([float(feature) if feature else nan for feature in features]).reshape(1, -1)
     feature_names = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
-    input_data = pd.DataFrame(features, columns=feature_names)
+    input_data = DataFrame(features, columns=feature_names)
 
     model = models['diabetes']
     prediction = model.predict(input_data)
