@@ -36,7 +36,8 @@ CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
     
         # heroku login
         # heroku container:login
-        # heroku create
+        # heroku create app_name
+        # heroku stack:set container --app app_name
         # heroku container:push web --app app_name
         # heroku container:release web --app app_name
         # heroku open --app app_name
